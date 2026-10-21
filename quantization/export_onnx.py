@@ -8,15 +8,17 @@ from models.base_model import load_mobilenet_v3
 
 
 def export_to_onnx():
-    print("[-] Loading FP32 MobileNetV3 model for ONNX export...")
+    print("[-] Loading model for ONNX export...")
     model = load_mobilenet_v3(pretrained=True)
     model.eval()
 
     dummy_input = torch.randn(1, 3, 224, 224)
-    os.makedirs("../weights", exist_ok=True)
-    onnx_path = "../weights/mobilenet_v3.onnx"
+    
+    # Save directly to weights/ in the root project folder
+    os.makedirs("weights", exist_ok=True)
+    onnx_path = "weights/mobilenet_v3.onnx"
 
-    print(f"[-] Exporting computation graph to ONNX format at {onnx_path}...")
+    print(f"[-] Exporting model to ONNX format at {onnx_path}...")
     torch.onnx.export(
         model,
         dummy_input,
