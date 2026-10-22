@@ -20,7 +20,7 @@ def run_realtime_inference():
     session = ort.InferenceSession(onnx_path, providers=['CPUExecutionProvider'])
     input_name = session.get_inputs()[0].name
 
-    video_path = "assets/test_video.mp4"
+    video_path = "assets/dog.mp4"
     print(f"[-] Opening video stream from file: {video_path}...")
     cap = cv2.VideoCapture(video_path)
 
