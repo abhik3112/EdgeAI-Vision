@@ -1,1 +1,4 @@
 assets/car.mp4
+__pycache__/
+*.py[cod]
+native/build/
