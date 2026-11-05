@@ -21,7 +21,7 @@ streams predictions over local video files.
 6. [deployment/deploy_aihub.py](/Users/abhik/Downloads/EdgeAI-Vision/deployment/deploy_aihub.py)
    compiles and profiles the model for a Qualcomm device through AI Hub.
 
-## Simple interview explanation
+## Simple explanation
 
 ### Why MobileNetV3-Small?
 
